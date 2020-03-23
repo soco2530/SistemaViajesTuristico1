@@ -1,0 +1,75 @@
+CREATE TABLE persona
+        (IdPersona int not null auto_increment,
+   	Apellidos nvarchar(40) not null,
+	Nombres nvarchar(50) not null,
+	Dni nvarchar(8) null,
+	Sexo varchar(10) NOT NULL,
+	FechaNacimiento date not null,
+	Direccion nvarchar(150) null,
+	Telefono nvarchar(11) null,
+	Celular nvarchar(11) null,
+	Email nvarchar(60) null,
+	Foto longblob null,
+	Activo char(1) not null,
+	Rnd varchar(20) not null,
+	CONSTRAINT persona_IdPersona_PK PRIMARY KEY(IdPersona))
+     ENGINE = InnoDB;
+	
+ 
+CREATE TABLE usuario
+	(IdUsuario int not null,
+	Login varchar(25) not null,
+	Pasword varchar(10) not null,
+	TipoUsuario nvarchar(30) not null,
+  	Activo char(1) not null,
+  	Constraint usuario_Login_UQ UNIQUE(Login),
+   	Constraint usuario_IdUsuario_Pk Primary key(IdUsuario),
+   	constraint usuario_IdUsuario_FK FOREIGN KEY(IdUsuario) references persona(IdPersona))
+   	ENGINE = InnoDB;
+
+CREATE TABLE lugarturistico
+       (IdLugarTuristico int not null auto_increment,
+	LugarTuristico varchar(100) not null,
+        Ciudad varchar(30) not null,
+        Imagen varchar(30) ,
+        Ubicacion varchar(100),
+        Activo char(1) not null,
+	CONSTRAINT lugarturistico_IdLugarTuristico_PK PRIMARY KEY(IdLugarTuristico))
+        ENGINE=InnoDB;
+
+CREATE TABLE diasemana
+       (IdDiaSemana int not null auto_increment,
+       DiaSemana varchar(20) not null,
+       CONSTRAINT diasemana_IdDiaSemana_PK PRIMARY KEY(IdDiaSemana))
+       ENGINE=InnoDB;
+
+CREATE TABLE cronogramaturistico
+       (IdCronogramaTuristico int not null auto_increment,
+       IdLugarTuristico int not null,
+       IdDiaSemana int not null,
+       HoraSalida varchar(8) not null,
+       HoraLlegada varchar(8) not null,
+       Precio numeric(9,2),
+       Activo char(1) not null,
+       CONSTRAINT cronogramaturistico_IdCronogramaTuristico_PK PRIMARY KEY(IdCronogramaTuristico),
+       CONSTRAINT cronogramaturistico_IdLugarTuristico_FK FOREIGN KEY(IdLugarTuristico) REFERENCES lugarturistico(IdLugarTuristico),
+       CONSTRAINT cronogramaturistico_IdDiaSemana_FK FOREIGN KEY(IdDiaSemana ) REFERENCES diasemana(IdDiaSemana ))
+       ENGINE=InnoDB;
+
+CREATE TABLE reservaciones
+       (IdReservacion int not null auto_increment,
+        FechaReservacion date,
+        HoraReservacion varchar(8),
+        IdPersona int not null,
+        IdUsuario int not null,
+        Monto numeric(9,2) not null,
+        IdLugarTuristico int not null,
+        Activo char(1) not null,
+	CONSTRAINT reservaciones_IdReservacion_PK PRIMARY KEY(IdReservacion),
+        CONSTRAINT reservacion_IdPersona_FK FOREIGN KEY(IdPersona) REFERENCES persona(IdPersona),
+        CONSTRAINT reservacion_IdUsuario_FK FOREIGN KEY(IdUsuario) REFERENCES usuario(IdUsuario),
+        CONSTRAINT reservacion_IdLugarTuristico_FK FOREIGN KEY(IdLugarTuristico) REFERENCES lugarturistico(IdLugarTuristico))
+        ENGINE=InnoDB
+
+        
+

@@ -1,0 +1,61 @@
+<form name="frmusuario" id="frmusuario"  >
+            <table width="90%" border="0" align="center" bgcolor="#FFFFFF" style="margin:auto">
+              <tr>
+                <td height="40" colspan="2" valign="top" class="letra"><h1 style="color:#666666">Registro de Clientes</h1>
+                <hr noshade="noshade" />&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="40" colspan="2" align="center" valign="middle" class="letra"><div class="textomensaje" id="mensaje"> Todos los campos con ( * ) son Obligatorios </div></td>
+              </tr>
+              <tr>
+                <td width="32%" align="right" class="letra">Apellidos: </td>
+                <td width="68%" align="left"><input name="txtApellidos" type="text" class="cajas" id="txtApellidos" size="43" maxlength="40" />
+                <strong class="textocolumna">*</strong></td>
+              </tr>
+              <tr>
+                <td align="right" class="letra">Nombres: </td>
+                <td align="left"><input name="txtNombres" type="text" class="cajas" id="txtNombres" size="43" maxlength="50" />
+                      <strong class="textocolumna">*</strong></td>
+              </tr>
+              <tr>
+                <td align="right" class="letra">Sexo:</td>
+                <td align="left"><select name="cboSexo" class="cajas" id="cboSexo">
+                  <option value="">Seleccionar</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                </select>
+                      <strong class="textocolumna">*</strong></td>
+              </tr>
+              <tr>
+                <td align="right" class="letra">Email:</td>
+                <td align="left"><input name="txtEmail" type="text" class="cajas" id="txtEmail" size="43" maxlength="60" />
+                      <strong class="textocolumna">*</strong></td>
+              </tr>
+              <tr>
+                <td align="right" class="letra">Usuario: </td>
+                <td align="left"><input name="txtUsuario" type="text" class="cajas" id="txtUsuario" size="35" maxlength="25" />
+                      <strong class="textocolumna">*</strong></td>
+              </tr>
+              <tr>
+                <td align="right" class="letra">Contrase&ntilde;a: </td>
+                <td align="left"><input name="txtClave" type="password" class="cajas" id="txtClave" size="25" maxlength="10" />
+                      <span class="textocolumna"><strong>*</strong></span></td>
+              </tr>
+              <tr>
+                <td align="right" class="letra">Confirmar Contrase&ntilde;a: </td>
+                <td align="left"><input name="txtConfirmarClave" type="password" class="cajas" id="txtConfirmarClave" size="25" maxlength="10" />
+                <span class="textocolumna"><strong>*
+                <input name="TipoUsuario" type="hidden" id="TipoUsuario" value="Cliente" />
+                </strong></span></td>
+              </tr>
+              
+              <tr>
+                <td height="63">&nbsp;</td>
+                <td align="left"><input type="button"  id="boton" name="cmdRegistrarme" class="botonform"  onclick="nuevo_usuario();" value="Registrarme" /></td>
+              </tr>
+              <tr>
+                <td height="63">&nbsp;</td>
+                <td align="left">&nbsp;</td>
+              </tr>
+  </table>
+</form>

@@ -1,0 +1,249 @@
+body{
+    margin:0px;
+		background:#99CC00;
+}
+
+#principal
+{   width: 1000px;
+    height: auto;
+    margin:auto;
+
+}
+
+#header
+{   width: 100%;
+    height: 185px;
+    margin:auto;
+    background-image:url('../imagenes/head.png');
+}
+
+#header #logo
+ {  background-image: url('../imagenes/header_logo.png');
+    width: 310px;
+    height: 173px;
+    float:left;
+}
+
+#header #es_logan
+{  background-image:url('../imagenes/header_eslogan.jpg');
+   width:464px;
+   height:40px;
+   float:left;
+   margin-top:70px;
+   margin-left:130px;
+}
+
+#header #menu
+{
+  width: 670px;
+  height:30px;
+  float:left;
+  margin:37px 0px 10px 20px;
+  padding-top:4px;
+  /*color:#fff;*/
+  font-weight:bold;
+  background:url(../imagenes/menu.png);
+  background-repeat:no-repeat;
+}
+
+#context
+{
+  
+   width: 100%;
+   height:auto;
+   background:#FFFFFF;   float:left;
+
+}
+#context #slider_context
+{
+   width: 100%;
+   margin: auto;
+   height:200px;
+  
+}
+#context #slider_context #slider_menu
+{
+   width: 20%;
+   margin: auto;
+   height:200px;
+   float:left;
+  
+   
+}
+#context #slider_context #slider_movimiento
+{
+   width: 78%;
+   margin: auto;
+   height:200px;
+   background-image:url(../imagenes/piura-peru-turismo.jpg);
+   background-repeat:no-repeat;
+   background-color:#666666;
+   float:right;
+   top:2px;
+  
+}
+#context  #information
+{
+   width: auto;
+   
+   height:auto;     
+}
+
+#context  #information .information
+{
+   width: 300px;
+   height:300px;
+   float:left;
+   padding-top:-5px;
+  
+   background-image:url(../imagenes/information.jpg);
+   background-repeat:no-repeat;
+   
+}
+
+#footer
+{ width:100%;
+height:150px;
+background-image:url(../imagenes/footer.png);
+background-repeat:no-repeat;
+float:left;
+}
+.textomensaje{
+ color:#00CC66;
+}
+
+
+
+
+.botonform{
+padding:5px 10px 5px 10px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+background-color:#66FF33;
+color:#FF0000;
+border:0px solid #000000;
+cursor:pointer;
+}
+
+.botonform:hover{
+padding:5px 10px 5px 10px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+background-color:#66CC00;
+color:#FFFFFF;
+border:0px solid #000000;
+cursor:pointer;
+}
+
+.cajas{
+padding:4px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+border:1px solid #9DC0D0;
+background-color:#FFFFFF;
+color:#075db2;/*#31c5f8;*/
+}
+.cajas:hover{
+padding:4px;
+font-family:Arial, Helvetica, sans-serif;
+color:#FF0000;
+font-size:11px;
+border:1px solid #9DC0D0;
+background-color:#E5F5FD;
+}
+
+.sombra { 
+	background:#dddcf6;
+	color:#FF0000;
+	cursor:pointer;
+	font-size:10px;
+        border:2px solid #BCBCBC; 
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	}
+.fila2 { 
+	background-color:#edf2f2; 
+	border-bottom:solid #FFFFFF; 
+	border-width:2px 0;
+	color:#075db2;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	}
+.fila1{ 
+	background-color:#FFFFFF; 
+	border-bottom:solid #FFFFFF; 
+	border-width:2px 0;
+	color:#31c5f8;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	}
+	
+	
+	
+.usuario{
+background-image:url(../imagenes/username-field.png);
+height:35px;
+width:168px;
+border:0px;
+padding-left:5px;
+padding-right:5px;
+padding-top:2px;
+background-repeat:no-repeat;
+}
+.usuario:hover{
+background-image:url('../imagenes/username-field-hover.png');
+height:35px;
+width:168px;
+border:0px;
+padding-left:5px;
+padding-right:5px;
+padding-top:2px;
+background-repeat:no-repeat;
+}
+.clave{
+background-image:url('../imagenes/password-field.png');
+height:35px;
+width:168px;
+border:0px;
+padding-left:5px;
+padding-top:2px;
+padding-right:5px;
+background-repeat:no-repeat;
+}
+.clave:hover{
+background-image:url('../imagenes/password-field-hover.png');
+height:35px;
+width:168px;
+border:0px;
+padding-left:5px;
+padding-top:2px;
+padding-right:5px;
+background-repeat:no-repeat;
+}
+
+.paginador{
+	background-color:#A2E1F4;
+	padding:4px;
+	border:1px solid #999999;
+	cursor:pointer;
+}
+.paginador:hover{
+	background-color:#3291EF;
+	padding:4px;
+	border:1px solid #999999;
+	cursor:pointer;
+        color:#ffffff;
+        font-weight: bold;
+}
+.paginadoractivo{
+	background-color:#0F79E3;
+	padding:4px;
+	border:1px solid #999999;
+	cursor:pointer;
+        color:#ffffff;
+}
+/*margin:25px 50px 75px 100px;
+top margin is 25px
+right margin is 50px
+bottom margin is 75px
+left margin is 100px*/
